@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A STUDIOS | Write. Create. Inspire.</title>
+    <style>
+        :root {
+            --bg-color: #050505;
+            --text-main: #f5f5f5;
+            --gold-accent: #d4af37;
+            --glass-bg: rgba(25, 25, 25, 0.6);
+        }
+        body, html {
+            margin: 0; padding: 0; 
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            scroll-behavior: smooth;
+        }
+        header {
+            position: fixed; width: 100%; top: 0; z-index: 100;
+            background: rgba(0,0,0,0.8); backdrop-filter: blur(10px);
+            display: flex; justify-content: space-between; padding: 20px 50px;
+            box-sizing: border-box;
+            align-items: center;
+        }
+        .logo { font-size: 24px; font-weight: bold; letter-spacing: 2px; color: var(--gold-accent); }
+        nav a { color: #fff; text-decoration: none; margin-left: 20px; font-size: 14px; letter-spacing: 1px; transition: color 0.3s; }
+        nav a:hover { color: var(--gold-accent); }
+        section { padding: 120px 50px 100px 50px; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; }
+        h1 { font-size: 72px; margin-bottom: 10px; font-weight: 700; letter-spacing: 4px;}
+        h2 { font-size: 40px; color: var(--gold-accent); margin-bottom: 50px; text-align: center; font-weight: 300; letter-spacing: 3px; }
+        .subtitle { font-size: 24px; font-weight: 300; letter-spacing: 2px; margin-bottom: 30px; }
+        .btn { display: inline-block; background: transparent; border: 1px solid var(--gold-accent); color: var(--gold-accent); padding: 15px 35px; font-size: 14px; cursor: pointer; transition: all 0.3s; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; }
+        .btn:hover { background: var(--gold-accent); color: var(--bg-color); }
+        
+        /* Team Section (No photos, pure text) */
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; width: 100%;}
+        .team-card { background: var(--glass-bg); padding: 50px 30px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.05); text-align: center; transition: transform 0.3s, border-color 0.3s;}
+        .team-card:hover { transform: translateY(-5px); border-color: rgba(212, 175, 55, 0.3); }
+        .team-name { font-size: 22px; font-weight: 600; letter-spacing: 3px; margin-bottom: 15px; color: #fff;}
+        .team-role { font-size: 12px; color: var(--gold-accent); letter-spacing: 2px; text-transform: uppercase; font-weight: 400;}
+        
+        /* Forms */
+        form { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; width: 100%;}
+        input, select, textarea { width: 100%; padding: 18px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); color: #fff; font-size: 14px; border-radius: 4px; box-sizing: border-box; letter-spacing: 1px; font-family: inherit;}
+        input:focus, select:focus, textarea:focus { outline: none; border-color: var(--gold-accent); background: rgba(255,255,255,0.06);}
+        select option { background: var(--bg-color); color: #fff; }
+        
+        footer { text-align: center; padding: 60px 20px; background: #000; font-size: 14px; color: #666; letter-spacing: 1px; border-top: 1px solid #111;}
+        
+        @media (max-width: 768px) {
+            header { padding: 20px; flex-direction: column; align-items: center; gap: 15px; }
+            nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+            nav a { margin: 0; }
+            h1 { font-size: 48px; }
+            section { padding: 120px 20px 80px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">A STUDIOS</div>
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#team">TEAM</a>
+        <a href="#join">JOIN US</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+</header>
+
+<section id="home" style="text-align: center; background: radial-gradient(circle at center, #111 0%, #050505 100%);">
+    <h1>A STUDIOS</h1>
+    <div class="subtitle">"Write. Create. Inspire."</div>
+    <p style="font-size: 16px; font-weight: 300; max-width: 600px; margin: 0 auto 50px auto; color: #888; letter-spacing: 1px;">Where stories become experiences.</p>
+    <div>
+        <a href="#team" class="btn">Meet The Team</a>
+        <a href="#join" class="btn" style="margin-left: 20px; background: var(--gold-accent); color: var(--bg-color);">Apply Now</a>
+    </div>
+</section>
+
+<section id="team" style="background: #080808;">
+    <h2>OUR TEAM</h2>
+    <div class="team-grid">
+        <div class="team-card">
+            <div class="team-name">ANITHA.D</div>
+            <div class="team-role">Founder / Head</div>
+        </div>
+        <div class="team-card">
+            <div class="team-name">SABARESHWARAN.S</div>
+            <div class="team-role">Co-Founder / Chief Head</div>
+        </div>
+        <div class="team-card">
+            <div class="team-name">SAKTHI.C</div>
+            <div class="team-role">Content Head</div>
+        </div>
+        <div class="team-card">
+            <div class="team-name">VIDHYA.B</div>
+            <div class="team-role">Management</div>
+        </div>
+        <div class="team-card">
+            <div class="team-name">ANUSRI.S</div>
+            <div class="team-role">Management</div>
+        </div>
+        <div class="team-card">
+            <div class="team-name">NAVEEN.K</div>
+            <div class="team-role">Account Holder / Editor</div>
+        </div>
+        <div class="team-card">
+            <div class="team-name">NIRMAL.E</div>
+            <div class="team-role">Creator</div>
+        </div>
+        <div class="team-card">
+            <div class="team-name">SANGAMITHIRAN.P</div>
+            <div class="team-role">Creator</div>
+        </div>
+    </div>
+</section>
+
+<section id="join">
+    <h2>JOIN A STUDIOS</h2>
+    <form onsubmit="event.preventDefault(); alert('Application feature requires backend integration.');">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <select required>
+            <option value="" disabled selected>Select Role Applying For</option>
+            <option value="actor">Actor</option>
+            <option value="director">Director</option>
+            <option value="editor">Editor</option>
+            <option value="cinematographer">Cinematographer</option>
+            <option value="creator">Creator</option>
+            <option value="management">Management</option>
+            <option value="other">Other Creative Roles</option>
+        </select>
+        <textarea rows="6" placeholder="Cover Letter / Details" required></textarea>
+        <button type="submit" class="btn" style="width: 100%; border:none; background: var(--gold-accent); color: var(--bg-color);">Submit Application</button>
+    </form>
+</section>
+
+<footer id="contact">
+    <h3 style="color: var(--gold-accent); letter-spacing: 3px; margin-bottom: 10px; font-weight: 400; font-size: 20px;">A STUDIOS</h3>
+    <p style="color: #fff; margin-bottom: 30px; font-size: 12px; letter-spacing: 2px;">"Write. Create. Inspire."</p>
+    <p>INFOASTUDIOS.COM</p>
+    <p>+91 7092878291</p>
+    <p style="margin-top: 40px; font-size: 11px;">&copy; 2026 A Studios. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
